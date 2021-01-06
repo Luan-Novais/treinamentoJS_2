@@ -80,13 +80,76 @@
 // // carro.ligar();
 // carro.acelerar();
 
-function menuToggle(){
-    let menuArea =  document.getElementById('menu-area');
-    if(menuArea.classList.contains('menu-opened') == true){
-        menuArea.classList.remove('menu-opened');
-    }else{
-        menuArea.classList.add('menu-opened');
-    }
+// function menuToggle(){
+//     let menuArea =  document.getElementById('menu-area');
+//     if(menuArea.classList.contains('menu-opened') == true){
+//         menuArea.classList.remove('menu-opened');
+//     }else{
+//         menuArea.classList.add('menu-opened');
+//     }
 
-};
+// };
 
+
+// let dia = 3;
+// let diaNome = '';
+
+// switch(dia){
+//     case 1:
+//         diaNome = 'segunda-feira';
+//         break;
+//     case 2:
+//         diaNome = 'terça-feira';
+//         break;
+//     case 3:
+//         diaNome = 'quarta-feira';
+//         break;
+//     case 4:
+//         diaNome = 'quinta-feira'
+//         break;
+//     case 5:
+//         diaNome = 'sexta-feira';
+//         break;
+//     case 6:
+//         diaNome = 'Sábado';
+//         break;
+//     default:
+//         diaNome = 'Domingo';
+//         break;
+// };
+
+// let texto = '';
+
+// for(i=0; i<50; i++){
+//     texto = texto + i + '<br>';
+// };
+
+// let carros = ['Ferrari','Palio','Uno','Fusca','Brasilia']
+
+// let html  = '<ul>'; 
+
+// for(i in carros){
+//     html += '<li>' + carros[i] +'</li>';
+// }
+
+// html += '</ul>'
+
+// document.getElementById('exemplo').innerHTML = html
+
+// let html = '';
+// let c = 0;
+
+// while(c <= 10){
+//     html += 'Numero: '+c+ '<br/>'
+//     c++;
+// }
+
+// document.getElementById('exemplo').innerHTML = html
+
+let nome = 'Luan Araujo de Santana Novais';
+
+console.log(nome.indexOf('Novais')); //Conta onde esta a primeira letra do valor procurado, caso não ache seu valor é -1
+console.log(nome.length); //Contar a quantidade de caracteres q tem uma string
+console.log(nome.slice(-4)); //Busca string nas posições de trás para frente
+console.log(nome.substring(0,10)); // Busca string somente das posições positivas, posição inicial até a posição 10 
+console.log(nome.substr(0,2)); // Inicia a leitura da posição 0 e conta 2 caracteres
