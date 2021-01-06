@@ -152,4 +152,4 @@ console.log(nome.indexOf('Novais')); //Conta onde esta a primeira letra do valor
 console.log(nome.length); //Contar a quantidade de caracteres q tem uma string
 console.log(nome.slice(-4)); //Busca string nas posições de trás para frente
 console.log(nome.substring(0,10)); // Busca string somente das posições positivas, posição inicial até a posição 10 
-console.log(nome.substr(0,2)); // Inicia a leitura da posição 0 e conta 2 caracteres
+console.log(nome.substr(0,2)); // Inicia a leitura da posição 0 e conta 2 caracteres - funciona com valores negativos tbm
