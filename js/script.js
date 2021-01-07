@@ -248,8 +248,5 @@ let pessoa = lista.find(function(a){
     return (a.sobrenome == 'Novais') ? true:false
 });
 
-alert(pessoa.nome)
 
-
-let res = lista2;
 console.log(pessoa)
