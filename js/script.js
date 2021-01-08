@@ -200,7 +200,8 @@ lista2 = lista.filter(function(a){
         return true
     }
 });
-Filtra o array e joga o valor dos que retonaram true em um novo array
+Filtra o array e joga o valor dos que retonaram true em uconst namesThatStartsWithM = names.filter(startsWithM); // ["Marcos"]
+m novo array
 
 ------------------------------------------------------------------------
 
@@ -237,16 +238,81 @@ Retorna a posição do elemento TRUE do array
 
 */
 
-let lista = [
-    {id:'123', nome:'Luan',sobrenome:'Novais'},
-    {id:'451', nome:'Jatde',sobrenome:'Silva'},
-    {id:'154', nome:'Thaiane',sobrenome:'Novais'},
+// let lista = [
+//     {id:'123', nome:'Luan',sobrenome:'Novais'},
+//     {id:'451', nome:'Jatde',sobrenome:'Silva'},
+//     {id:'154', nome:'Thaiane',sobrenome:'Novais'},
 
-];
+// ];
 
-let pessoa = lista.find(function(a){
-    return (a.sobrenome == 'Novais') ? true:false
-});
+// let pessoa = lista.find(function(a){
+//     return (a.sobrenome == 'Novais') ? true:false
+// });
+
+// lista = pessoas.find(function(item){
+//     return (item == 'Luan') ? true:false
+// });
+
+// let lista2 = [];
+
+// lista2 = lista.split(' - ');
+
+//TRABALHANDO COM DATAS 
+
+// let d = new Date();
+//let  d = Date.now(); = Retorna a data atual em milesegundos
+// let d = new Date(); - Criando um objeto do tipo Date, posso colocar até 7 parametros
+// d.toDateString(); Retorna somente data, sem horarios
+// d.toUTCString(); Retorna data com Horarios HHMMSS
+// getFullYear(); = retorna ano 
+// getMonth(); = retorna mes
+// getDay(); = retorna o dia da semana (semana começa no domingo)
+// getDate(); = Pega o dia da semana 
+// getHours();
+// getSeconds(); 
+// getMilliseconds();
+// getTime();
+// PARA TROCAR OS VALORES DE DATA IREMOS MUDAR O GET por SET 
+
+// MATEMATICA 
+// Math é a classe de matematica do JS
+// Math.round() - Arredondar numeros 
+// Math.floor() - Sempre arredonda para baixo
+// Math.ceil () - Sempre arredonda para cima 
+// Math.abs() - Busca o numero absoluto  
+// Math.min(7,2,5,3,1) - retorna o menor numero deles 
+// Math.max(7,2,5,3,1) - retorna o maior numero deles
+// Math.random() - retorna um numero aleatorio entre 0 e 1 
+// Math.floor(Math.random() * 100); 
+// let novoValor = Math.floor(Math.random() * 100); 
+
+// INTERVALOS - TIMES 
+// let timer;
+
+// function comecar(){
+//     timer = setInterval(showTime, 100);
+// }
+
+// function parar(){
+//     clearInterval(timer);
+// }
 
 
-console.log(pessoa)
+// function showTime(){
+//     let d = new Date();
+//     let mm = d.getMilliseconds();
+//     let s = d.getSeconds();
+//     let m = d.getMinutes();
+//     let h = d.getHours();
+//     let txt = h+':'+m+':'+s+':'+mm;
+
+//     document.querySelector('.demo').innerHTML = txt;
+// }
+
+// function limparCronometro(){
+//     document.querySelector('.demo').innerHTML =''
+// }
+
+// setTimeout(function(){(
+//     document.querySelector('.demo').innerHTML = 'FOOOII'
+// )}, 2000);
