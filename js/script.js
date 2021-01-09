@@ -281,7 +281,7 @@ Retorna a posição do elemento TRUE do array
 // Math.ceil () - Sempre arredonda para cima 
 // Math.abs() - Busca o numero absoluto  
 // Math.min(7,2,5,3,1) - retorna o menor numero deles 
-// Math.max(7,2,5,3,1) - retorna o maior numero deles
+// Math.max(;7,2,5,3,1) - retorna o maior numero deles
 // Math.random() - retorna um numero aleatorio entre 0 e 1 
 // Math.floor(Math.random() * 100); 
 // let novoValor = Math.floor(Math.random() * 100); 
@@ -316,3 +316,52 @@ Retorna a posição do elemento TRUE do array
 // setTimeout(function(){(
 //     document.querySelector('.demo').innerHTML = 'FOOOII'
 // )}, 2000);
+
+/*
+TEMPLATE STRING
+let nome = 'Luan';
+let idade = 90;
+console.log(`meu nom é ${nome} e eu tenho ${idade + 1} anos`); */
+
+// DESCONSTRUINDO OBJETOS
+/*
+let pessoa = {
+    nome: 'Luan',
+    idade: 28,
+    sobrenome: 'Novais',
+    social:{
+        facebook: 'luan.novais@outlook.com',
+        instagran:{
+            url: '@lasnovais',
+            seguidores:1000
+        }
+    },
+};
+
+let { nome, sobrenome, social:{ facebook}, social:{instagran: { url }}} = pessoa
+console.log(`Guest: ${nome} ${sobrenome} ,Facebook: ${facebook} and Instagran ${url}`)
+
+
+function pegarNomeCompleto({nome, sobrenome}) {
+    return `${nome} ${sobrenome}`;
+ }
+
+ console.log(pegarNomeCompleto(pessoa));
+
+DESCONSTRUINDO ARRAYS
+// let info = [ 'Luan Novais', 'Luan', 'Novais', '@lasnovais' ];
+// let [ nomeCompleto, nome, sobrenome, instagran ] = info;
+
+// console.log(nomeCompleto, nome, sobrenome, instagran);*/
+
+
+// ARROW FUNCTIONS
+// const somar = (x, y) => {return x + y;}
+// const somar = (x, y) => x + y
+const letrarNoNome = (nome) => {
+    return nome.length;
+}
+
+
+let result = letrarNoNome('Luan');
+console.log(result);
