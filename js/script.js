@@ -358,10 +358,149 @@ DESCONSTRUINDO ARRAYS
 // ARROW FUNCTIONS
 // const somar = (x, y) => {return x + y;}
 // const somar = (x, y) => x + y
-const letrarNoNome = (nome) => {
-    return nome.length;
+// const letrarNoNome = (nome) => {
+//     return nome.length;
+// }
+
+
+// let result = letrarNoNome('Luan');
+// console.log(result);
+
+// let numeros = [1,2,3,4];
+
+// let outros = [...numeros,6,7,8];
+// console.log(outros);
+
+// let info = {
+//     nome:'Luan',
+//     sobrenome:'Novais',
+//     idade:30
+// };
+
+// let novaInfo = {
+//     ...info,
+//     cidade:'Santana de parnaiba',
+//     estado:'sp',
+//     pais:'Brasil'
+// };
+
+
+// function adicionarInfo(info){
+//     let novasInfo = {
+//         ...info,
+//         status:0,
+//         token:'fdsjkgds51gs',
+//         data_cadastro:new Date()
+//     };
+
+//     return novasInfo
+// };
+
+// console.log(adicionarInfo({nome:'Luan', sobrenome:'Novais'}))
+ 
+//OPERADOR SPREAD - APROVEITA OS VALORES DE UM ARRAY OU OBJETO , EM UM NOVO.. SINTAXE -  ...ARRAY, 
+
+/*
+let numeros = [1,2,3];
+let outros = [
+    ...numeros,
+    3,4,5,6
+];
+
+console.log(outros) */
+
+// OPERADOR REST - quandoe u não sei quantos itens serão enviados, eu recebo todos em formato de array
+/*
+let nomes = [ 'JOao','Maria']
+
+function adicionar(nomes, ...novosNomes){
+    let novoConjunto = [
+        ...nomes,
+        ...novosNomes
+    ];
+
+    return novoConjunto
 }
 
 
-let result = letrarNoNome('Luan');
-console.log(result);
+let outros = adicionar(nomes,'Antonio','João','Marias');
+
+console.log(outros)*/
+
+// -------------- INCLUDES -----------
+/*
+let lista = ['ovo', 'cafe', 'arroz', 'feijão', 'macarrão'];
+// console.log( lista.includes('ovo') );
+
+let nome = 'Luan';
+// console.log( nome.includes('n') );
+
+console.log( 'x'.repeat(20) );*/
+
+//----------------------------OBJECT KEY/VALUES -----------
+
+// Object.values(); = retorna os valores do array ou objeto
+// Object.keys(); = retorna as chaves do objeto ou array 
+
+/*
+let lista = ['ovo', 'cafe', 'arroz', 'feijão', 'macarrão'];
+let pessoa = {
+    nome:'Luan',
+    sobrenome: 'NOvaios',
+    idade: 90
+};
+
+console.log( Object.values(pessoa) );*/
+
+// let cartao = '1234123412341234';
+// let lastDigital = cartao.slice(-4);
+
+// console.log( 'Seu cartão é: ' + lastDigital.padStart(16, '*') );
+// // console.log( telefone );
+
+// ---- PROMISE ---- 
+/*
+function fazer(){
+    let promessa = new Promise( (resolve,reject) => {
+        setTimeout( () =>{
+            resolve('OK');
+        }, 3000 )
+       
+    });
+
+    return promessa
+}
+
+fazer().then( (resposta) =>{
+    console.log(resposta);
+});*/
+
+// -- fetch -- REQUISIÇÕES AJAX
+function requisitar(){
+    const url = 'https://alunos.b7web.com.br/api/ping';
+const params = {
+    method:'POST',
+    body:JSON.stringify({
+        nome:'Luan',
+        idade: 99
+    })
+};
+
+fetch(url,params)
+    .then((r)=>r.json())
+    .then((json)=>{
+        console.log(json);
+    });
+}
+
+async function requisitar2(){
+    const url = 'https://alunos.b7web.com.br/api/ping';
+
+
+    const r = await fetch(url)
+    const jason = await r.json();
+
+    console.log(jason)
+}
+
+requisitar2();
